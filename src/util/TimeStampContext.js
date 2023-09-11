@@ -56,5 +56,5 @@ function timeStampInfoReducer(timeStampInfo, action) {
 const initialTimeStampInfo = {
     targetTime : Date.now(),
     relativeTime : {"Weeks":0, "Days":0, "Hours":0, "Minutes":0, "Seconds":0},
-    format : "Relative" 
+    format : "Date Weekday" 
 };
