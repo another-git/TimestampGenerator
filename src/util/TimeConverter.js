@@ -33,10 +33,10 @@ export function getConvertedTime(time, format) {
         }
             break;
         case "Time":
-            formattedString = `${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 12 ? " PM" : " AM"}`
+            formattedString = `${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
             break;
         case "Long Time":
-            formattedString = `${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()}:${then.getSeconds() < 10 ? "0" + then.getSeconds() : then.getSeconds()} ${then.getHours() > 12 ? " PM" : " AM"}`
+            formattedString = `${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()}:${then.getSeconds() < 10 ? "0" + then.getSeconds() : then.getSeconds()} ${then.getHours() > 11 ? " PM" : " AM"}`
             break;
         case "Date":
             formattedString = `${then.getMonth() < 10 ? "0" + (then.getMonth() + 1): then.getMonth() + 1}/${then.getDate() < 10 ? "0" + then.getDate() : then.getDate()}/${then.getFullYear()}`
@@ -45,14 +45,14 @@ export function getConvertedTime(time, format) {
             formattedString = `${months[then.getMonth()]} ${then.getDate()}, ${then.getFullYear()}`
             break;
         case "Date Time":
-            formattedString = `${months[then.getMonth()]} ${then.getDate()}, ${then.getFullYear()} ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 12 ? " PM" : " AM"}`
+            formattedString = `${months[then.getMonth()]} ${then.getDate()}, ${then.getFullYear()} ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
             break;
         case "Date Weekday":
-            formattedString = `${weekDays[then.getDay()]}, ${months[then.getMonth()]} ${then.getDate()}, ${then.getFullYear()} ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 12 ? " PM" : " AM"}`
+            formattedString = `${weekDays[then.getDay()]}, ${months[then.getMonth()]} ${then.getDate()}, ${then.getFullYear()} ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
             break;
         default:
             if (isSameDate) {
-                formattedString = `Today at ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 12 ? " PM" : " AM"}`
+                formattedString = `Today at ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
             }
             break;
     }
