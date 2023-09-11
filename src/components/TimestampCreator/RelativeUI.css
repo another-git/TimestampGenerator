@@ -1,0 +1,7 @@
+.relative-ui-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    justify-content: space-around;
+    width: 100%;
+}
