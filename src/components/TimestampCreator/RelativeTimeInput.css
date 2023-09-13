@@ -6,6 +6,10 @@
     outline: none;
     font-size: 20px;
     text-align: center;
+    padding-top: 3px;
+    background-color: rgba(43, 45, 49);
+    color: white;
+    border: 2px solid rgb(17,18,20);
 }
 
 .relative-time-label {
@@ -16,7 +20,7 @@
 }
 
 .relative-time-field-wrapper {
-    background-color: white;
+    background-color: rgba(43, 45, 49);
     color: black;
     border-radius: 4px;
     display: flex;

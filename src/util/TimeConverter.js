@@ -52,7 +52,7 @@ export function getConvertedTime(time, format) {
             break;
         default:
             if (isSameDate) {
-                formattedString = `Today at ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours()}:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
+                formattedString = `Today at ${then.getHours() > 12 ? then.getHours() - 12 : then.getHours() > 0 ? then.getHours() : "12" }:${then.getMinutes() < 10 ? "0" + then.getMinutes() : then.getMinutes()} ${then.getHours() > 11 ? " PM" : " AM"}`
             }
             break;
     }

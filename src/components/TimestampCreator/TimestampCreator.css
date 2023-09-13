@@ -8,7 +8,7 @@
 
 .creation-mode-toggle {
     display: flex;
-    border-radius: 1rem;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -18,9 +18,10 @@
     padding-left: .75rem;
     padding-right: .75rem;
     cursor: pointer;
-    background-color: grey;
+    background-color: rgb(17,18,20);
     transition: all .25s;
     user-select: none;
+    margin-top: -2px;
 }
 
 .selected {
@@ -30,33 +31,75 @@
 .timestamp-format-selector {
     cursor: pointer;
     height: fit-content;
-    width: 154px;
+    width: 164px;
     position: relative;
     background-color: gray;
-    padding-left: 4px;
-    padding-right: 4px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+}
+
+.selected-format {
+    margin-top: -2px;
 }
 
 .timestamp-format-selector-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 24px;
-    max-height: 24px;
+    width: 95%;
+    background-color: rgb(17,18,20);
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.timestamp-format-preview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.timestamp-format-preview svg {
+    transition: all .2s;
+}
+
+.timestamp-format-dropdown-items::before {
+    display: block;
+    content: "";
+    height: 11px;
+    width: 100%;
 }
 
 .timestamp-format-dropdown-items {
+    position: absolute;
     overflow-y: hidden;
-    width: fit-content;
+    width: 100%;
     transition: all .5s;
+    top: 54px;
+    left: 0px;
+    background-color: rgb(17,18,20);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .timestamp-format-option {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: calc(100% - 16px);
+    margin-top: -2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    user-select: none;
+    padding-left: 16px;
+}
+
+.timestamp-format-option:hover {
+    background-color:rgb(36,37,41);
 }
 
 .generated-message-container {
@@ -69,11 +112,17 @@
 }
 
 .generated-message-box {
+    display: flex;
     font-size: 20px;
-    border: 2px solid black;
+    border: 2px solid rgb(17,18,20);
+    background-color: rgba(43, 45, 49);
     border-radius: 4px;
     padding: 7px 16px 8px 16px;
     filter: brightness(75%);
+}
+
+.generated-timestamp {
+    margin-top: -2px;
 }
 
 .copy-button {
@@ -81,8 +130,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: rgb(88, 101, 242);
-    height: 46px;
+    background-color: rgb(17,18,20);
+    height: 44px;
     width: 42px;
     border-radius: 4px;
+}
+
+.copy-button:hover {
+    background-color: rgb(88, 101, 242);
 }

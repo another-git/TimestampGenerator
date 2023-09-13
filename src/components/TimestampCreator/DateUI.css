@@ -9,6 +9,8 @@
 .date-calendar-picker {
     font-size: 24px;
     border-style: none;
+    padding: 4px;
+    border: 2px solid rgb(17,18,20);
     border-radius: 3px;
     color: white;
     background-color: rgba(43, 45, 49);
