@@ -25,6 +25,8 @@
     background-color: red;
     height: 40px;
     width: 40px;
+    min-height: 40px;
+    min-width: 40px;
     border-radius: 40px;
     position: relative;
     cursor: pointer;
@@ -48,7 +50,11 @@
     row-gap: 2px;
 }
 
-.message-info-bar, .message-content-layout {
+.message-content-layout {
+    text-align: start;
+}
+
+.message-info-bar {
     display: flex;
     flex-direction: row;
 }

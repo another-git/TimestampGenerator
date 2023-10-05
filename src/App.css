@@ -24,11 +24,16 @@ h1, h2 {
   row-gap: 1rem;
 }
 
+.main-section-header {
+  text-align: center;
+}
+
 .app-intro-section {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   align-items: center;
+  text-align: center;
 }
 
 .mock-discord-message-section {

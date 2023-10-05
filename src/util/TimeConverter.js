@@ -23,7 +23,7 @@ export function getConvertedTime(time, format) {
 
     switch(format) {
         case "Relative":
-            if(unixDiff < 60 && unixDiff > -60) return `${unixDiff >= 0 ? "in " : ""}${Math.round(Math.abs(unixDiff)) === 1 ? "a second" : unixDiff + " seconds"}${unixDiff < 0 ? " ago" : ""}`;
+            if(unixDiff < 60 && unixDiff > -60) return `${unixDiff >= 0 ? "in " : ""}${Math.round(Math.abs(unixDiff)) === 1 ? "a second" : Math.abs(unixDiff) + " seconds"}${Math.abs(unixDiff) < 0 ? " ago" : ""}`;
             if(unixDiff < 3600 && unixDiff > -3600) return `${unixDiff >= 0 ? "in " : ""}${Math.round(Math.abs(unixDiff/60)) === 1 ? "a minute" : Math.round(Math.abs(unixDiff/60)) + " minutes"}${unixDiff < 0 ? " ago" : ""}`;
             if(unixDiff < 86400 && unixDiff > -86400) return `${unixDiff >= 0 ? "in " : ""}${Math.round(Math.abs(unixDiff/3600)) === 1 ? "an hour" : Math.round(Math.abs(unixDiff/3600)) + " hours"}${unixDiff < 0 ? " ago" : ""}`;
             if(unixDiff < 2419200 && unixDiff > -2419200) return `${unixDiff >= 0 ? "in " : ""}${Math.round(Math.abs(unixDiff/86400)) === 1 ? "a day" : Math.round(Math.abs(unixDiff/86400)) + " days"}${unixDiff < 0 ? " ago" : ""}`;

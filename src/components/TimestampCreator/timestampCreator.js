@@ -58,7 +58,7 @@ export default function TimestampCreator(props) {
                     <span className="selected-format">Format -&nbsp;{timeStampInfo.format}</span>
                     <HiOutlineChevronRight style={ open ? { transform : "rotate(90deg)" } : {} }/>
                 </div>
-                <div ref={dropdownRef} className="timestamp-format-dropdown-items" style={ open ? { height : dropdownRef.current.scrollHeight + "px"} : { height : "0px"}}>
+                <div ref={dropdownRef} className="timestamp-format-dropdown-items" style={ open ? { height : dropdownRef.current.scrollHeight + "px" } : { height : "0px"}}>
                     {
                         formatList.map(function(option) {
                             return <div className="timestamp-format-option" key={option} style={option === timeStampInfo.format ? {backgroundColor:"rgb(88, 101, 242)"} : {}}onClick={ (e) => {
